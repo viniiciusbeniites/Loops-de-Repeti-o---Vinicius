@@ -1,0 +1,121 @@
+//questao1
+var soma = 0
+
+while soma < 100 {
+    let num = Int.random(in: 0...100)
+    soma += num
+    print(num)
+}
+print("Soma: \(soma)")
+print(" ")
+
+//questao2
+var arraySenhaAcesso = ["batata", "novasenha", "sair"]
+var senhaAleatoria = ""
+
+while senhaAleatoria != "novasenha" && senhaAleatoria != "sair"{
+    senhaAleatoria = arraySenhaAcesso.randomElement()!
+
+  if(senhaAleatoria == "novasenha"){
+    print("Acesso concedido!")
+  }else if(senhaAleatoria == "sair"){
+    print("Programa encerrado!") 
+  }
+  print(senhaAleatoria)
+}
+print(" ")
+
+//questao3
+var arrayNota = [0,1,2,3,4,5,6,7,8,9,10]
+var notaAleatoria = 0
+var somaNota = 0
+var media = 0
+var i:Int = 0
+var cada:Int = 0
+
+while i < 10 {
+
+  while cada < 3 {
+  notaAleatoria = arrayNota.randomElement()!
+  print("Nota: \(notaAleatoria)")
+  somaNota += notaAleatoria;
+  cada += 1;
+  }
+
+  media = somaNota/3
+  print("A média desse aluno é: \(media)");
+  i += 1;
+  cada = 0
+}
+
+print(" ")
+
+//questao4
+var cont = 0
+var maior = 0
+var menor = 0
+
+while cont < 50 {
+    let numMaiorMenor = Int.random(in: 0...100)
+    if(numMaiorMenor > maior){
+      maior = numMaiorMenor
+    }else if(numMaiorMenor < menor){
+      menor = numMaiorMenor
+    }
+    cont += 1
+    print(numMaiorMenor)
+}
+print("O maior número é: \(maior)")
+print("O menor número é: \(menor)")
+
+print(" ")
+
+//questao5
+var contador = 0
+var contNum = 0
+var tabuada = 0
+var numero = 0
+
+while contador < 4 {
+    let n = Int.random(in: 0...15)
+    while contNum <= n{
+      tabuada = contNum * n
+      print("\(n) x \(contNum) = \(tabuada)")
+      contNum += 1
+    }
+    contador += 1
+    contNum = 0
+    tabuada = 0
+    print(" ")
+}
+
+print(" ")
+
+//questao6
+var numPrimo = 93
+var somaPrimo = 0
+var resto3 = 0
+var resto5 = 0
+var resto11 = 0
+
+while numPrimo > 92 && numPrimo < 1478{
+ resto3 = numPrimo % 3;
+ resto5 = numPrimo % 5;
+ resto11 = numPrimo % 11;
+
+ if(resto3 != 0 && resto5 != 0 && resto11 != 0){
+   somaPrimo += numPrimo
+   print(numPrimo)
+ }
+
+ numPrimo += 2
+}
+print(somaPrimo)
+print(" ")
+
+//questao7
+var conta = 0
+var arrayNumOrdem = [25,10,5,80,64,21,53,87,0,100]
+
+arrayNumOrdem.sort()
+print(arrayNumOrdem)
